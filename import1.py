@@ -1,9 +1,13 @@
 import random
-r = random.randint(1, 100)
+s = input('請決定你要猜的隨機數字範圍的開頭：')
+f = input('請決定你要猜的隨機數字範圍的結尾：')
+s = int(s)
+f = int(f)
+r = random.randint(s, f)
 count = 0
 while True:
 	count += 1 #just count = count +1
-	num = input('請猜一個數字，1-100: ')
+	num = input('請範圍內猜一個數字: ')
 	num = int(num)
 	if num == r:
 		print('你猜對了!')
